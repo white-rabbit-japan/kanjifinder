@@ -1,0 +1,32 @@
+meteor mongo --url YOURSITE.meteor.com
+
+mongoimport --host meteor.m0.mongolayer.com --port 27017 --username client --password 55facaeb-a3bc-ecfd-e79c-a035bc97cd59 --db kanjifinder_whiterabbitpress_com --collection kanji --type csv --file c:\kanjifinder\kanjifinder.csv --headerline
+
+mongoimport -h localhost:3002 --db meteor --collection kanji --type csv --file c:\kanjifinder\kanjifinder.csv --headerline
+
+connected to: meteor.m0.mongolayer.com:27017
+
+select kanji, cardid, 'Series 2 Volume 1' as volume from kanji where cardid between 1 and 300
+UNION 
+select kanji, cardid, 'Series 2 Volume 2' as volume from kanji where cardid between 301 and 1050
+UNION
+select kanji, cardid, 'Series 2 Volume 3' as volume from kanji where cardid between  1051 and 1945
+order by cardid
+
+è„íÜå‹
+
+If oyu want to contact us in US then you have to call us on 1800-833-6687 Option 2, Option 3 then Option 4
+
+
+We begin with the most common character and the source of all life, the ^SUN^. ì˙ depicts the SUN with a line drawn along its equator. It also means ^DAY^, as well as ^JAPAN^ (as an abbreviation for ì˙ñ{ [Ç…ÇŸÇÒ]). In the sample vocabulary, note the symbol ÅX, which means "repeat last character"; thus, ì˙ÅX=ì˙ì˙.
+
+
+mongoimport -h meteor.m0.mongolayer.com:27017 -u client -p 08cd2a7b-ded9-0315-2a40-580b1141ccdf --db meteor --collection kanji --type csv --file c:\kanjifinder\kanjifinder.csv --headerline
+
+
+
+The next three entries, representing the numbers ^ONE^, ^TWO^ and ^THREE^, are classic examples of Chinese characters as ideographs ? written symbols that represent abstract ideas. But one could also argue that they are in fact pictographs, representing one, two or three fingers.
+
+
+
+

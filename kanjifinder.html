@@ -1,0 +1,69 @@
+<head>
+	<title>Kanji Finder - White Rabbit Press</title>
+</head>
+<body>
+	<div class="header">
+		<div class="container">
+			<h1 class="logo ir">White Rabbit Japan</h1>
+			<ul class="big-nav">
+				<li><a href="http://whiterabbitjapan.com">Home</a></li><a href="http://whiterabbitjapan.com"></a>
+				<li><a href="http://whiterabbitjapan.com"></a><a href="http://whiterabbitexpress.com">Services</a></li>
+				<li><a href="http://shop.whiterabbitjapan.com">Shop</a></li>
+				<li><a href="http://community.whiterabbitjapan.com">Community Forums</a></li>
+				<li><a href="http://shop.whiterabbitjapan.com/affiliate/affiliates/">Affiliates</a></li>
+				<li><a href="http://help.whiterabbitjapan.com">Help</a></li>
+			</ul> 
+		</div><!-- container -->
+	</div><!-- header -->
+	<div style="clear:both;"></div>
+	<div id="outer">
+		{{> kanjifinder}}
+	</div>
+</body>
+<template name="kanjifinder">
+	<div class="container">
+		<header class="jumbotron subhead" id="overview">
+			<div class="row">
+				<div class="span6">
+					<h1>Kanji Finder</h1>
+					<p class="lead">Kanji Flashcard Cross-Reference tool.</p>
+				</div>
+			</header>
+			<h4>Use this tool to get the White Rabbit Press <a href="http://shop.whiterabbitjapan.com/japanese-kanji-flashcards-series-2-volume-1.html" target="_blank">Japanese Kanji Flashcards</a> card numbers for a list of kanji.</h4>
+			<form class="well form-search" _lpchecked="1">
+				<div>Enter one or more kanji characters:</div>
+				<input type="text" id="txtQuery" class="txtQuery" value="白赤青"/>
+				<input type="button" id="btnSearch" class="btnOK btn btn-primary" value="Search" />
+			</form>
+			<section id="Results">
+				<div class="page-header">
+					<h2>Results</h2>
+				</div>
+				<table class="table table-bordered table-striped table-hover">
+					<thead>
+						<tr>
+							<th>Kanji</th>
+
+							<th>Card ID</th>
+							<th>Flashcard Set</th>
+						</tr>
+					</thead>
+					<tbody>
+						{{#each kanjicharacters}}
+						{{> kanji}}
+						{{/each}}
+					</tbody>
+				</table>
+			</section>
+		</div>
+	</div>
+</template>
+
+<template name="kanji">
+	<tr>
+		<td>{{kanji}}</td>
+		<td>{{cardid}}</td>
+		{{cardsetFormatter volume}}
+		</tr>
+</template>
+
